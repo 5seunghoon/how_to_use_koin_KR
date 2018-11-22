@@ -1,7 +1,7 @@
 # How to use Koin for DI (KR) 
 
 
-### 1. View
+### 1. View (MainActivity)
 
     private val mViewModel:MainViewModel by viewModel()
 
@@ -9,14 +9,14 @@
 Koin의 viewModel()을 통해 의존성 주입
 
 
-### 2. ViewModel
+### 2. ViewModel (MainViewModel)
 
     class MainViewModel(private val modelImpl: HelloDataModel) : ViewModel() {}
 
 android.arch.lifecycle.ViewModel을 상속, 생성자로 Model을 받도록 구현
 
 
-### 3. Model
+### 3. Model (MainDataModel)
 
 
     override fun printHello() : HelloKotlinData {  
@@ -26,14 +26,14 @@ android.arch.lifecycle.ViewModel을 상속, 생성자로 Model을 받도록 구�
   간단하게 Data를 반환 
 
 
-### 4. Data
+### 4. Data (HelloKotlinData)
 
     data class HelloKotlinData(var name: String, var time: Long)
 
 코틀린의 data class 이용
 
 
-### 5. AppModule
+### 5. AppModule (AppModue.kt)
 
     val MyModule : Module = module {  
       factory <HelloDataModel> {  
@@ -52,7 +52,7 @@ android.arch.lifecycle.ViewModel을 상속, 생성자로 Model을 받도록 구�
 factory로 DataModel을 만들고 viewModel에서 get()을 통해 DI 수행
 
 
-### 6. Application class
+### 6. Application class (MyApplication)
 
     startKoin(context, AppModule)
 

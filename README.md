@@ -23,17 +23,17 @@ android.arch.lifecycle.ViewModel을 상속, 생성자로 Model을 받도록 구�
         return HelloKotlinData("KOTLIN", System.currentTimeMillis())  
     }  
     
-  간단하게 Data를 반환 
+요청시 간단하게 Data를 반환하는 모델 
 
 
 ### 4. Data (HelloKotlinData)
 
     data class HelloKotlinData(var name: String, var time: Long)
 
-코틀린의 data class 이용
+간단하게 data class 이용
 
 
-### 5. AppModule (AppModue.kt)
+### 5. AppModule (AppModule.kt - MyAppModule)
 
     val MyModule : Module = module {  
       factory <HelloDataModel> {  
@@ -49,12 +49,12 @@ android.arch.lifecycle.ViewModel을 상속, 생성자로 Model을 받도록 구�
 
 객채간의 관계를 정의
 
-factory로 DataModel을 만들고 viewModel에서 get()을 통해 DI 수행
+factory로 Model을 만들고 viewModel{}에서 get()을 통해 factory로 만든 modeldmf 가져옴으로서 DI 수행
 
 
 ### 6. Application class (MyApplication)
 
-    startKoin(context, AppModule)
+    startKoin(context, MyAppModule)
 
 startKoin의 인자로 컨텍스트와 AppModule을 넘겨줌으로서 DI 수행
 

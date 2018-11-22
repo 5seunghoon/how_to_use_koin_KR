@@ -1,4 +1,4 @@
-# how_to_use_koin_KR
+# How to use Koin for DI (KR) 
 
 
 ### 1. View

@@ -97,4 +97,4 @@ startKoin의 인자로 컨텍스트와 AppModule을 넘겨줌으로서 DI 수행
 > 버튼을 누르면 ViewModel의 ChangeData를 호출하여 PublishSubject를 변경
 
 
-이렇게 하여 버튼을 눌렸을 때 데이터가 변경되고, 그것을 View가 관찰하며 즉각적인 반응을 할 수 있게 구현 완료
+이렇게 하여 버튼을 눌렸을 때 데이터가 변경되고, 그것을 View가 관찰하며 즉각적이게 반응할 수 있다..

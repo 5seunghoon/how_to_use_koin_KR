@@ -47,7 +47,7 @@ android.arch.lifecycle.ViewModel을 상속, 생성자로 Model을 받도록 구�
       
     val MyAppModule = listOf(MyModule)
 
-객간의 관계를 정의
+객체간의 관계를 정의
 
 factory로 Model을 만들고 viewModel{}에서 get()을 통해 factory로 만든 modeldmf 가져옴으로서 DI 수행
 
